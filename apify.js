@@ -47,8 +47,8 @@ const fetchData = async (min, max) => {
     } else if (count == 0) {
       return;
     } else {
-      fetchData(min, max / 2);
-      fetchData(max / 2 + 1, max);
+      await fetchData(min, max / 2);
+      await fetchData(max / 2 + 1, max);
     }
   } catch (e) {
     throw Error(e);
